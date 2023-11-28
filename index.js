@@ -20,6 +20,8 @@ function switchTab(clickedTab)
         currentTab = clickedTab;
         currentTab.classList.add("currentTabStyle");
         
+
+        
         if(!searchForm.classList.contains('active'))
         {
             grantAccessContainer.classList.remove('active');
@@ -114,13 +116,13 @@ function renderWeatherInfo(weatherdata)
 
     weathericon.src = `https://openweathermap.org/img/wn/${weatherdata?.weather?.[0]?.icon}.png`;
 
-    temp.innerText = weatherdata?.main?.temp;
+    temp.innerText = `${weatherdata?.main?.temp}°C`;
 
-    windspeed.innerText = weatherdata?.wind?.speed;
+    windspeed.innerText = `${weatherdata?.wind?.speed} m/s`;
 
-    humidity.innerText = weatherdata?.main?.humidity;
+    humidity.innerText = `${weatherdata?.main?.humidity}%`;
 
-    cloudiness.innerText = weatherdata?.clouds?.all;
+    cloudiness.innerText = `${weatherdata?.clouds?.all}%`;
   
 }
 
@@ -176,6 +178,7 @@ async function fetchsearchweatherinfo(city)
     loadingScreen.classList.add("active");
     userInfoContainer.classList.remove("active");
     grantAccessContainer.classList.remove("active");
+    
 
     try{
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_key}&units=metric`);
@@ -189,3 +192,6 @@ async function fetchsearchweatherinfo(city)
     }
 }
 
+body.scrollTo({
+    behavior: 'smooth' // This creates a smooth scroll effect
+  });
