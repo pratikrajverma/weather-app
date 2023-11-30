@@ -1,12 +1,15 @@
+//fetching both tabs
 const userTab = document.querySelector("[data-userweather]");
 const searchTab = document.querySelector("[data-searchweather]");
 
+// fetching all 4 screen
 const grantAccessContainer = document.querySelector(".grant-location-container");
 const searchForm=document.querySelector("[data-search-form]");
 const loadingScreen = document.querySelector(".loading-container");
 const userInfoContainer = document.querySelector(".user-info-container");
 
 const API_key = "4134abfbeb79a649224c675983bf3779";
+
 let currentTab = userTab;
 currentTab.classList.add("currentTabStyle");
 getFromSessionStorage();
@@ -143,7 +146,7 @@ function getlocation()
         navigator.geolocation.getCurrentPosition(showposition);
     }
     else{
-        
+
         alert('location error');
     }
 }
@@ -193,6 +196,3 @@ async function fetchsearchweatherinfo(city)
     }
 }
 
-body.scrollTo({
-    behavior: 'smooth' // This creates a smooth scroll effect
-  });
