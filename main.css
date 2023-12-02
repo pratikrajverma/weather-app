@@ -108,6 +108,7 @@ h1{
 
 .user-info-container{
     display: none;
+    width: 80%;
 
 }
 
@@ -153,11 +154,14 @@ h1{
     display: flex;
     gap: 3rem;
     margin-top: 2rem;
+    width: 100%;
+    justify-content: center;
 }
 
 .parameter{
-    height: 8rem;
-    width: 9rem;
+    max-height: 8rem;
+    width: 20%;
+    max-width: 9rem;
     background-color: #d1d1d194;
     opacity: .7;
     display: flex;
@@ -173,15 +177,15 @@ h1{
 }
 
 .parameter p{
-
-    font-size: 1.2rem;
+    font-size:larger
 }
 
 
 
 .form-container{
     display: none;
-    width: 550px;
+    width:80%;
+    max-width: 30rem;
     margin: 0 auto;
     justify-content: center;
     gap: 0 10px;
@@ -198,8 +202,8 @@ h1{
     height: 40px;
     padding: 0 20px;
     margin-bottom: 25px;
-    /* width: calc(100%- 10px); */
-    width: 25rem;
+    max-width:30rem;
+    width: 100%;
     border-radius: 10px;
     background-color: rgb(219,226,239,0.5);
 
